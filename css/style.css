@@ -1,0 +1,469 @@
+@charset "utf-8";
+@font-face {
+  font-family: "Mont";
+  font-display: swap;
+  src: url("../fonts/Mont-Heavy.woff2") format("woff2"), url("../fonts/Mont-Heavy.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Mont DEMO";
+  font-display: swap;
+  src: url("../fonts/Mont-DEMOExtraLight.woff2") format("woff2"), url("../fonts/Mont-DEMOExtraLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Mont";
+  font-display: swap;
+  src: url("../fonts/Mont-Light.woff2") format("woff2"), url("../fonts/Mont-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Mont";
+  font-display: swap;
+  src: url("../fonts/Mont-SemiBold.woff2") format("woff2"), url("../fonts/Mont-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Mont Book";
+  font-display: swap;
+  src: url("../fonts/Mont-Book.woff2") format("woff2"), url("../fonts/Mont-Book.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Mont";
+  font-display: swap;
+  src: url("../fonts/Mont-Black.woff2") format("woff2"), url("../fonts/Mont-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Mont Hairline";
+  font-display: swap;
+  src: url("../fonts/Mont-Hairline.woff2") format("woff2"), url("Mont-Hairline.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Mont";
+  font-display: swap;
+  src: url("../fonts/Mont-Regular.woff2") format("woff2"), url("../fonts/Mont-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Mont";
+  font-display: swap;
+  src: url("../fonts/Mont-ExtraLight.woff2") format("woff2"), url("../fonts/Mont-ExtraLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Mont";
+  font-display: swap;
+  src: url("../fonts/Mont-Bold.woff2") format("woff2"), url("../fonts/Mont-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Mont DEMO";
+  font-display: swap;
+  src: url("../fonts/Mont-DEMOHeavy.woff2") format("woff2"), url("../fonts/Mont-DEMOHeavy.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Mont";
+  font-display: swap;
+  src: url("../fonts/Mont-Thin.woff2") format("woff2"), url("../fonts/Mont-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+}
+section,
+footer {
+  position: relative;
+}
+body {
+  font-family: "Mont";
+  box-sizing: border-box;
+
+}
+
+
+@media (min-width: 1250px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+@media (min-width: 1350px) {
+  .container {
+    max-width: 1300px;
+  }
+}
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1500px;
+  }
+}
+@media (min-width: 1750px) {
+  .container {
+    max-width: 1700px;
+  }
+}
+@media (min-width: 1850px) {
+  .container {
+    max-width: 1770px;
+  }
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    
+    z-index: 99999;
+    padding:5px 0;
+}
+.navbar ul.navbar-nav{
+	margin-right: 10%;
+
+}
+.navbar ul.navbar-nav li .nav-item.active,
+.navbar ul.navbar-nav li .nav-item:hover{
+	background: rgba(0,0,0,0.5);
+	color: #fff;
+}
+
+.navbar ul.navbar-nav li.nav-item a{
+	color: white;
+	font-size:1.1em;
+	font-weight: 500;
+	letter-spacing: 1.5px;
+
+}
+.navbar .navbar-brand img{
+	height: 100%;
+	width: 150px;
+	margin-left: 7%;
+} 
+
+/* Carousel base class */
+.carousel-fade {
+	position: relative;
+    margin-bottom: 60px;
+    height: 100vh;
+    width: 100%;
+   
+}
+.carousel-fade .carousel-inner{
+	position: relative;
+	height: 100%;
+	width: 100%;
+	background-color: #000;
+}
+.carousel-fade .carousel-inner:before{
+	position: relative;
+	content: '';
+	background:rgba(0,0,0,0.45);
+	top:0;
+	left:0;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+    position: relative;
+}
+
+/* Declare heights because of positioning of img element 
+.carousel-fade .carousel-inner .carousel-item .banner-item{
+
+    position: absolute;
+    right: 15%;
+    bottom: 20px;
+    left: 15%;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-align: center;
+}
+*/
+.carousel-fade .carousel-inner .carousel-item {
+	position: relative;
+    height: 100%;
+    width: 100%;
+    background:url("../images/car-fly.jpg");
+    background-size: 100% 100%;
+    background-position: center;
+
+}
+.carousel-fade .carousel-inner .carousel-item:nth-child(2) {
+
+    background:url("../images/banner-2nd-bg.webp");
+    background-size: 100% 100%;
+    background-position: center;
+
+}
+.carousel-fade .carousel-inner .carousel-item:nth-child(3) {
+	
+    background:url("../images/banner-3rd-bg.webp");
+    background-size: 100% 100%;
+    background-position: center;
+
+}
+.carousel-fade .carousel-inner .carousel-item:nth-child(4) {
+	
+    background:url("../images/banner-4th-bg.webp");
+    background-size: 100% 100%;
+    background-position: center;
+
+}
+.carousel-fade .carousel-inner .carousel-item .carousel-caption h2{
+	position:fixed;
+	font-weight: 50;
+	font-size: 2.7em;
+	color: #000;
+	align-items: center;
+    transform:translateY(-50%);
+    z-index: 1;
+    color: #fff;
+    padding-top: 50%;
+
+}
+
+.carousel-fade .carousel-inner .carousel-item .carousel-img img{
+    width: 40%;
+	position: relative;
+	padding-top:50%;
+	z-index: 1;
+	align-items: right;
+    transform:translateY(-50%);
+    float: right;
+
+
+}
+
+.carousel-fade .carousel-inner .carousel-inner .img-move img{
+	position: fixed;
+
+}
+
+.carousel-fade .carousel-inner .carousel-item .img-move img.move1{
+	top: -24%;
+    left: 33%;
+    left: auto;
+    z-index: 0;
+    animation-name: myOrbit;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    
+   
+
+
+
+}
+.carousel-fade .carousel-inner .carousel-item .img-move img.move2{
+	top: -2%;
+    right: -3%;
+    left: auto;
+    bottom: auto;
+    z-index: 0;
+    animation-name: myOrbit;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    
+   
+}
+
+.carousel-fade .carousel-inner .carousel-item .img-move img.move3{
+	top: -26%;
+    left: 23%;
+    z-index: 0;
+    animation-name: myzoom;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  
+   
+}
+
+.carousel-fade .carousel-inner .carousel-item .img-move img.move4{
+	top: -6%;
+    right: -11%;
+    left: auto;
+    bottom: auto;
+    z-index: 0;
+    animation-name: myzoom;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+   
+   
+}
+
+.carousel-fade .carousel-inner .carousel-item .left-img img{
+	position: absolute;
+    left: -400px;
+    top: 25%;
+    webkit-animation: spin 200s linear infinite;
+    -moz-animation: spin 200s linear infinite;
+    animation: spin 200s linear infinite;
+}
+
+.carousel-control-next, .carousel-control-prev {
+    top: auto;
+    bottom: 10%;
+    right: 5%;
+    width: auto;
+    opacity: 1;
+}
+.carousel-control-next {
+    left: auto;
+    margin-right: 5%;
+
+}
+.carousel-control-prev {
+    right: auto;
+    margin-left: 85%;
+}
+@media (min-width: 360px) and (max-width: 767px){
+.after-carousel {
+    width: 100%;
+}
+}
+
+.after-carousel {
+    position: relative;
+    width: 101%;
+}
+
+
+@media (min-width: 320px) and (max-width: 767px){
+.after-carousel img{
+    left: 0px;
+}
+}
+.after-carousel img{
+    position: absolute;
+    max-width: 101%;
+    bottom: -1px;
+    left: -15px;
+    transform: translateY(-50%);
+    z-index: 10;
+
+}
+}
+
+@keyframes spin{
+	100% {
+    -webkit-transform: rotate(
+360deg
+);
+    transform: rotate(360deg);
+}
+}
+@keyframes myzoom{
+	0% {
+    transform: scale(1);
+}
+
+50% {
+    transform: scale(0.5);
+    filter: blur(5px);
+}
+100% {
+    transform: scale(1);
+}
+}
+
+@keyframes myOrbit{
+	0% {
+    transform: rotate(360deg) translateY(150px) rotate(-360deg) translateX(150px) rotate(360deg);
+}
+100% {
+    transform: rotate(0deg) translateY(150px) rotate(0deg) translateX(150px) rotate(0deg);
+}
+}
+@keyframes slideInRight{
+0% {
+    -webkit-transform: translate3d(100%,0,0);
+    transform: translate3d(100%,0,0);
+    visibility: visible;
+}
+100% {
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+}
+
+@-webkit-keyframes slideInUp{
+	0% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    visibility: visible;
+}
+100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+}
+@keyframes slideInUp{
+0% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    visibility: visible;
+}
+100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+}
+
+
+@keyframes fedeInUp{
+	0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0,100%,0);
+    transform: translate3d(0,100%,0);
+}
+100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+}
+}
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+.fadeInUp {
+
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+}
+.slideInUp {
+    -webkit-animation-name: slideInUp;
+    animation-name: slideInUp;
+}
+.slideInRight {
+    -webkit-animation-name: slideInRight;
+    animation-name: slideInRight;
+}
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
